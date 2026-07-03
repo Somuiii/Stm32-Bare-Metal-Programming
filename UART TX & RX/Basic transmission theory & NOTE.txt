@@ -1,0 +1,32 @@
+Serial communication - 8 bits, one at a time, 1 wire
+Parallel communication - 8 bits, all at once, 8 wires
+
+UART is a serial communication
+
+2 Types of serial comm -  
+1) Asynchronous - Universal Asynchronous Receiver Transmitter
+2) Synchronous - Universal Synchronous Receiver Transmitter 
+
+STM32 has USART, i.e., Universal Synchronous Asynchronous Receiver Transmitter 
+
+Transmission modes - 
+
+1. Duplex - Data can be transmitted and received 
+2. Simplex - Data can only be transmitted or received 
+3. Half Duplex - Data can be transmitted only in one way at a time
+4. Full Duplex - Data can be transmitted in both ways at a same time
+
+
+In asynchronous transmission,  each byte is placed between start bit and stop bit. 
+
+Start bit is always 1 bit , and its value is “0” [STB]
+
+Stop bit can be 1 bit or 2 bits, and its value is always “1”. [SB]
+
+Eg - transmitted ASCII “A” , ASCII A = 0100 0001
+
+Therefore its transmission code would be - 11(SB) 0100 0001 0(STB).
+
+make 2 new files
+1st - 1 source file, which will contain all the code and we will call them in main.c using header files
+2nd - 1 header file for the source file
