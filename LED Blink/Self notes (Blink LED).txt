@@ -1,0 +1,8 @@
+flowchart - 
+
+1. Identify which peripheral should be accessed, define those peripherals
+2. List the bus we are gonna need for comms using reference manuals, datasheets, memory maps too
+3. Define the addresses of all the peripherals along with their buses using the memory maps
+4. After defining, typecast the registers we are gonna use so that we can use them in main()
+5. do all the bitshifting in main()
+6. use comments for debugging
