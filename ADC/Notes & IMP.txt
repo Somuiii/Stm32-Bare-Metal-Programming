@@ -1,0 +1,18 @@
+Resolution of ADC - 
+
+Step size is the smallest detectable change by the sensor, so for eg if we have an ADC of 8 bit resolution, and taking Vref as 5v, we get step size as 2^8 = 256, and 5v / 256  = 19.56mV, i.e., we have the step size as 19.56mV.
+
+Our STM32F4CEU6 has a single ADC module, and we get around 5 independent modes of configuration. 
+
+SINGLE MODULE =/ SINGLE CHANNEL
+
+1. Single channel single conversion mode - ADC performs a single channel x and then stops after the conversion is complete. ( use cases - threshold measurement)
+2.Multichannel single conversion mode - ADC performs multiple channel ( upto 16 in stm32f4 ) and then stops. ( use case - multiple sensors threshold measurement )
+3.Single channel, continuous conversion mode - ADC performs continuous conversions in a single channel.
+4.Multiple channel, continuous conversion mode - ADC performs continuous conversions in multiple channels, i.e., at multiple sensors upto 16.
+5.Injected conversion mode - ADC performs conversions ONLY when an external event triggers it. This mode has PRIORITY over other modes.
+
+
+
+IMP - for multiple channels to be configured at once, for eg, ch2, ch4, ch5, and we want priority to be ch4, ch2 & ch5, 
+we put binary number 4, 2 and 5 in the sqr reg 
