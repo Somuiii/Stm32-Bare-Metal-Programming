@@ -1,3 +1,7 @@
+we used our own usart driver for this, the header files are mentioned, copy those into the respective folders 
+
+Theory :
+
 Resolution of ADC - 
 
 Step size is the smallest detectable change by the sensor, so for eg if we have an ADC of 8 bit resolution, and taking Vref as 5v, we get step size as 2^8 = 256, and 5v / 256  = 19.56mV, i.e., we have the step size as 19.56mV.

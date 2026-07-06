@@ -4,6 +4,7 @@
 #define GPIOA_EN	 (1U << 0)
 #define ADC1_EN		 (1U << 0)
 #define ADC_START	 (1U << 30)
+#define ADC_CONT	 (1U << 1)	
 #define ADC_CONV_END (1U << 1)
 
 int main(){
@@ -49,6 +50,7 @@ uint32_t ADC_Read(void){
 
 void ADC_Start_Con(void){
 
+	//ADC1->CR2 |= ADC_CONT;                                  //this is for continuous ADC conversion 
 	ADC1->CR2 |= ADC_START;
 
 }
