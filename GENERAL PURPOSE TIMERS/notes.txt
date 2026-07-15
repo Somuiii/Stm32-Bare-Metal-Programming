@@ -1,0 +1,15 @@
+the basic difference between timer and a counter is that timer is internal clock source whereas counter is an external clock source. 
+
+Uses of timers - 
+
+1. used as time base generator 
+2. used to measure the frequency of an external event 
+3. to control an o/p waveform (e.g, visualize a pwm wave which changes wrt frequency) or to indicate when a period of time has elapsed
+4. allows the timer to start whenever there an interrupt / stimulus 
+
+important terminologies -
+
+1. Update event - when timeout occurs or how long will it take for a flag to be raised
+2. Period - Value loaded into auto reload register
+3. Up counter - Counts from zero to a set value
+4. Down counter - Counts from a set value to zero
